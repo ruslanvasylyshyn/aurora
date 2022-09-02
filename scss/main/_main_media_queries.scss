@@ -1,0 +1,399 @@
+@use "../global/vars";
+
+@media (max-width: 1024px) {
+  .main__top-input {
+    width: 400px;
+  }
+}
+
+@media (max-width: 800px) {
+  .main__top-input {
+    width: 200px;
+  }
+
+  .main__nav-item {
+    margin-right: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .main__nav,
+  .main__title,
+  .main__top-button,
+  .main__top-separator {
+    display: none;
+  }
+
+  .main__top-logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 20px;
+  }
+
+  .main__top-logo a {
+    font-size: 21px;
+  }
+
+  .main__top-input {
+    position: absolute;
+    top: 57px;
+    left: -320px;
+    transition: left 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .main__top-inputActive {
+    width: calc(100% - 32px);
+    left: 16px;
+    right: 16px;
+  }
+
+  .main__top-searchButton {
+    height: 17px;
+    width: 17px;
+    margin-left: 25px;
+    margin-top: 18px;
+  }
+
+  .main__top-searchButton > img {
+    color: #fff;
+  }
+
+  .main__top-searchIcon {
+    top: 0;
+  }
+
+  .main__top-basket,
+  .main__top-numberOfGoods {
+    margin-top: 17px;
+  }
+
+  // burger
+  .burger {
+    position: absolute;
+    left: 16px;
+    top: 22px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-right: 16px;
+    z-index: 3;
+  }
+
+  .burger span,
+  .burger span:before,
+  .burger span:after {
+    width: 100%;
+    position: absolute;
+    height: 3px;
+    background: vars.$white;
+    display: block;
+    transition: 0.3s;
+  }
+  .burger span:before {
+    content: "";
+    top: -5px;
+    transition: top 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .burger span {
+    top: 5px;
+  }
+  .burger span:after {
+    content: "";
+    bottom: -5px;
+    transition: bottom 300ms 300ms,
+      transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .burger span.active:before {
+    content: "";
+    top: 0px;
+    background: vars.$black;
+    transform: rotate(45deg);
+    transition: top 300ms,
+      transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .burger span.active:after {
+    content: "";
+    bottom: 0;
+    background: vars.$black;
+    transform: rotate(-45deg);
+    transition: bottom 300ms,
+      transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .burger span.active {
+    background: vars.$white;
+  }
+
+  .menu,
+  .menu__woman,
+  .menu__clothing,
+  .burger,
+  .menuGrey {
+    display: block;
+  }
+
+  .menu {
+    width: calc(100% - 40px);
+    height: 100vh;
+    background: vars.$white;
+    color: vars.$black;
+    padding: 16px;
+    position: fixed;
+    top: 0;
+    left: -620px;
+    transition: left 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    z-index: 2;
+  }
+
+  .menuGrey {
+    width: 100vw;
+    height: 100vh;
+    background: #d8d8d8;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: -620px;
+    transition: left 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    // z-index: 1;
+  }
+  .menu.animate,
+  .menuGrey.animate {
+    left: 0;
+  }
+
+  // Burger end
+
+  .main__top-logoMobileBlack {
+    text-align: center;
+    font-weight: 700;
+    font-size: 17px;
+    margin-top: 8px;
+    margin-bottom: 42px;
+  }
+
+  .main__top-logoMobileBlack a {
+    color: #333333;
+  }
+
+  .main__top-basket .active {
+    display: none;
+  }
+
+  // menu list
+
+  .menu__list,
+  .menu__list ul,
+  .menu__woman ul,
+  .menu__clothing ul {
+    list-style: none;
+  }
+
+  .menu__item {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 46px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+  }
+
+  .menu__item > a,
+  .menu__item > span {
+    color: vars.$black;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  .menu__list li:last-child {
+    margin-bottom: 94px;
+  }
+
+  .menu__authorization {
+    // margin-left: -16px;
+    width: 100%;
+    height: 48px;
+    background: #f7f7f7;
+    padding-top: 17px;
+    padding-left: 15px;
+    position: absolute;
+    left: 0;
+    bottom: 111px;
+  }
+
+  .menu__authorization-button {
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 15px;
+    letter-spacing: 1px;
+    color: vars.$black;
+    border: none;
+    background: #f7f7f7;
+    cursor: pointer;
+  }
+
+  .menu__authorization-separator {
+    height: 10px;
+    width: 1px;
+    background-color: vars.$black;
+    border: none;
+    display: inline-block;
+  }
+
+  .menu__ourStores {
+    width: 100%;
+    height: 48px;
+    background: #f7f7f7;
+    padding-top: 17px;
+    padding-left: 15px;
+    position: absolute;
+    left: 0;
+    bottom: 62px;
+    font-size: 10px;
+    line-height: 15px;
+    letter-spacing: 0.5px;
+    color: vars.$black;
+    padding-left: 32px;
+  }
+
+  .menu__footer {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 32px;
+    font-size: 10px;
+    line-height: 15px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: vars.$black;
+  }
+
+  .menu__woman {
+    z-index: -1;
+    width: calc(100% - 40px);
+    height: 100vh;
+    background: vars.$white;
+    color: vars.$black;
+    padding: 16px;
+    position: fixed;
+    top: 0;
+    left: -620px;
+    transition: left 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    cursor: pointer;
+  }
+
+  .menu__woman.active {
+    z-index: 3;
+    left: 0;
+  }
+
+  .close__woman-button,
+  .close__clothing-button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .menu__woman-header,
+  .menu__clothing-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 41px;
+  }
+
+  .menu__woman-logoMobileBlack a,
+  .menu__clothing-logoMobileBlack a {
+    color: vars.$black;
+  }
+
+  .menu__woman-subHeader,
+  .menu__clothing-subHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 13px;
+  }
+
+  .menu__woman-subHeader span:first-child {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: vars.$black;
+  }
+
+  .menu__woman-subHeader span:last-child,
+  .menu__clothing-subHeader span {
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: 0.0916667px;
+    text-decoration-line: underline;
+    color: vars.$black;
+  }
+
+  .menu__woman-line,
+  .menu__clothing-line {
+    width: calc(100% + 32px);
+    margin-left: -16px;
+    margin-bottom: 13px;
+    height: 1px;
+    background-color: vars.$black;
+  }
+
+  .menu__woman .menu__item {
+    border-bottom: 1px solid #f7f7f7;
+    line-height: 46px;
+  }
+
+  .menu__clothing {
+    z-index: -1;
+    width: calc(100% - 40px);
+    height: 100vh;
+    background: vars.$white;
+    color: vars.$black;
+    padding: 16px;
+    position: fixed;
+    top: 0;
+    left: -620px;
+    transition: left 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    cursor: pointer;
+  }
+
+  .menu__clothing.active {
+    z-index: 4;
+    left: 0;
+  }
+
+  .menu__clothing-subHeader button {
+    border: none;
+    background: transparent;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: vars.$black;
+    cursor: pointer;
+  }
+
+  .menu__clothing-subHeader img {
+    transform: rotate(180deg);
+  }
+
+  .menu__clothing .menu__item {
+    font-size: 12px;
+    line-height: 46px;
+    letter-spacing: 0.1px;
+    color: vars.$black;
+    font-weight: 400;
+    border-bottom: 1px solid #f7f7f7;
+  }
+
+  .menu__clothing .menu__ourStores {
+    padding-left: 15px;
+  }
+
+  .menu__clothing .menu__ourStores img {
+    margin-right: 7px;
+  }
+}

@@ -1,0 +1,70 @@
+@use "../global/vars";
+
+.footer {
+  height: 197px;
+  background-color: #F7F7F7;
+  padding-top: 26px;
+}
+
+.footer__navigation {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 38px;
+}
+
+.footer__navigation-list,
+.footer__navigation-list ul {
+  list-style: none;
+}
+
+.footer__navigation-headerItem,
+.footer__navigation-headerItem a {
+  font-family: cormorant-garamond, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  color: vars.$black;
+}
+
+.footer__navigation-headerItem span {
+  cursor: pointer;
+}
+
+.footer__navigation-headerItem ul,
+.footer__navigation-list ul {
+  margin-top: 17px;
+}
+
+.footer__navigation-item > a {
+  font-family: poppins, sans-serif;
+  font-size: 12px;
+  line-height: 19px;
+  letter-spacing: 0.1px;
+  color: vars.$black;
+  margin-bottom: 6px;
+}
+
+.footer__navigation-headerItem img {
+  display: none;
+}
+
+.footer__navigation ul:nth-child(4) .footer__navigation-headerItem {
+  margin-bottom: 20px;
+}
+
+.footer__navigation-itemWrapper {
+  list-style: none;
+  display: flex;
+}
+
+.footer__navigation-itemWrapper > li {
+  margin-right: 16px;
+}
+
+.footer__copyright {
+  font-size: 9px;
+  line-height: 14px;
+  text-align: center;
+  letter-spacing: 0.5px;
+  color: vars.$black;
+}

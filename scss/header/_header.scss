@@ -1,0 +1,33 @@
+@use "../global/vars";
+
+.header__container {
+  height: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: vars.$white;
+}
+
+.header__text {
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 16px;
+  color: vars.$black;
+}
+
+.header__location {
+  display: flex;
+  align-items: center;
+
+  &-stores {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 15px;
+    letter-spacing: 0.0833333px;
+    color: vars.$black;
+    margin-left: 6px;
+    position: relative;
+    right: 0;
+  }
+}
+

@@ -1,0 +1,14 @@
+@media (max-width: 600px) {
+    .register__title,
+    .register__form {
+        width: calc(100% - 32px);
+    }
+
+    .register__container {
+        padding: 0;
+    }
+
+    .register__input {
+        padding: 11px 5px;
+    }
+}

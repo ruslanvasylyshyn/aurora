@@ -1,0 +1,74 @@
+@use "../global/vars";
+
+.register__container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.register__title {
+  width: 439px;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.872727px;
+  color: vars.$black;
+  margin-bottom: 14px;
+}
+
+.register__form {
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+}
+
+.register__input {
+  width: 334px;
+  height: 32px;
+  border: 1px solid #e1e0e1;
+  outline: 1px solid #e1e0e1;
+  caret-color: #e1e0e1;
+  border-radius: 3px;
+  padding: 11px;
+}
+
+.register__input::placeholder {
+  font-style: normal;
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 0.8px;
+  color: #4a4a4a;
+}
+
+.register__input:active {
+  border: 1px solid vars.$white;
+  outline: 1px solid vars.$white;
+}
+
+.register__button {
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: vars.$white;
+  background: vars.$black;
+  border-radius: 3px;
+  padding: 6px 20px;
+  margin-left: 12px;
+  border: none;
+  cursor: pointer;
+}
+
+.register__button:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.register__button:active {
+  color: vars.$black;
+  background: vars.$white;
+}
